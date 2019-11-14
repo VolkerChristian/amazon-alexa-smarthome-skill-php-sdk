@@ -233,7 +233,7 @@ class AlexaModeResources extends AlexaResources
 
 class AlexaFriendlyName implements JsonSerializable
 {
-    public function __construct($text, $type = 'text', $locale = 'de_DE')
+    public function __construct($text, $type = 'text', $locale = 'de-DE')
     {
         $this->type = $type;
         $this->value = (object)array();
