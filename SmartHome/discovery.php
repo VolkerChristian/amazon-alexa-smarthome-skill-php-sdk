@@ -20,7 +20,7 @@ if($alexa_discovery == null)
 }
 else
 {
-    echo discovery();
+    echo discover();
 }
 
 ?>
