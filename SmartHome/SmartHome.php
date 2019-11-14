@@ -4,23 +4,75 @@ require_once(dirname(dirname(__FILE__)).'/alexa_smarthomeskill_api/alexa_discove
 require_once(dirname(dirname(__FILE__)).'/alexa_smarthomeskill_api/alexa_endpoint.php');
 require_once(dirname(dirname(__FILE__)).'/alexa_smarthomeskill_api/alexa_response.php');
 
-$called = true;
-require_once(dirname(__FILE__).'/SmartHome.php');
-
-$req = file_get_contents ( 'php://input' );
-$json_data = json_decode($req);
-
-header('Content-Type: application/json');
-
-$alexa_discovery = AlexaDiscoveryRequest::fromJSON($json_data);
-if($alexa_discovery == null)
+//function jalousie($endpoint, $friendlyName1, $friendlyName2)
+function jalousie($endpoint, $friendlyNames)
 {
-    echo json_encode(new AlexaDiscoveryResponse(null));
-    exit();
+    $capabilityResources = new AlexaCapabilityResources();
+    
+    foreach($friendlyNames as $friendlyName){
+        $capabilityResources->add_friendlyName(new AlexaFriendlyName($friendlyName));
+    }
+    
+    $modeResourcesOpen = new AlexaModeResources();
+    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("Öffnen"));
+    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("Auf"));
+    
+    $supportedModeOpen = new AlexaSupportedMode($endpoint.".Open");
+    $supportedModeOpen->add_modeResources($modeResourcesOpen);
+    
+    $modeResourcesClose = new AlexaModeResources();
+    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("Schließen"));
+    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("Zu"));
+    
+    $supportedModeClose = new AlexaSupportedMode($endpoint.'.Close');
+    $supportedModeClose->add_modeResources($modeResourcesClose);
+    
+    $modeConfiguration = new AlexaModeConfiguration();
+    $modeConfiguration->add_supportedMode($supportedModeOpen);
+    $modeConfiguration->add_supportedMode($supportedModeClose);
+    
+    $modeController = new AlexaCapabilityInterfaceModeController("Jalousie.".$endpoint, false, false);
+    $modeController->add_capabilityResources($capabilityResources);
+    $modeController->add_configuration($modeConfiguration);
+    
+    $iot_dev = new AlexaEndpoint($endpoint.'Jalousie', $endpoint);
+    $iot_dev->manufacturerName = "Werama";
+    $iot_dev->description = "Werama Jalousien - made smart by Volker Christian";
+    $iot_dev->add_displayCategories(AlexaEndpointDisplayCategories::OTHER);
+    $iot_dev->add_Capability($modeController);
+    $iot_dev->add_capability(new AlexaCapabilityInterfaceAlexa());
+/*
+    $iot_dev->add_capability(new AlexaCapabilityInterfaceEndpointHealth());
+*/
+/*
+    $cookies = new AlexaEndpointCookies();
+    $cookies->add_cookie("mykey", "this information is hidden from users.");
+    $cookies->add_cookie("warning", "but dont store any confidential information here");
+    $iot_dev->set_cookie($cookies);
+*/
+    return $iot_dev;
 }
-else
+
+function discover()
 {
-    echo discovery();
+    $devices = new AlexaEndpoints();
+    
+    $devices->add(jalousie('Kitchen', array('Küche', 'Küchenjalousie', 'Jalousie in Küche')));
+    $devices->add(jalousie('Street', array('Straße', 'Straßenseite', 'Jalousie auf Straßenseite')));
+    $devices->add(jalousie('Diningtable', array('Esstisch', 'Esstischjalousie', 'Jalousie bei Esstisch')));
+    $devices->add(jalousie('Balcony', array('Balkon', 'Balkonjalousie', 'Jalousie bei Balkon')));
+    $devices->add(jalousie('Sleepingroom', array('Schlafzimmer', 'Schlafzimmerjalousie', 'Jalousie im Schlafzimmer')));
+    $devices->add(jalousie('Homeoffice', array('Arbeitszimmer', 'Arbeitszimmerjalousie', 'Jalousie im Arbeitszimmer')));
+
+    $devices_response = new AlexaDiscoveryResponse($devices);
+
+    echo json_encode($devices_response);
 }
+
+if (!isset ($called))
+{
+    echo discover();
+}
+
 
 ?>
