@@ -205,6 +205,115 @@ class AlexaCapabilityInterfaceChannelController extends AlexaCapabilityInterface
     }   
 };
 
+/* To other File */
+class AlexaResources implements JsonSerializable
+{
+    public $friendlyNames = array();
+    
+    public function __construct()
+    {
+    }
+    
+    public function add_friendlyName($friendlyName)
+    {
+        array_push($this->friendlyNames, $friendlyName);
+    }
+    
+    public function jsonSerialize() 
+    {
+        return get_object_vars($this);
+    }
+}
+
+class AlexaCapabilityResources extends AlexaResources
+{}
+
+class AlexaModeResources extends AlexaResources
+{}
+
+class AlexaFriendlyName implements JsonSerializable
+{
+    public function __construct($text, $type = 'text', $locale = 'de_DE')
+    {
+        $this->type = $type;
+        $this->value = (object)array();
+        $this->value->text = $text;
+        $this->value->locale = $locale;
+    }
+    
+    public function jsonSerialize()
+    {
+        return [
+            '@type' => $this->type,
+            'value' => $this->value
+        ];
+    }
+}
+
+class AlexaModeConfiguration implements JsonSerializable
+{
+    public function __construct()
+    {
+        $this->ordered = 'false';
+        $this->supportedModes = array();
+    }
+    
+    public function add_supportedMode($supportedMode)
+    {
+       array_push($this->supportedModes, $supportedMode);
+    }
+    
+    public function jsonSerialize() 
+    {
+        return get_object_vars($this);
+    }
+}
+
+class AlexaSupportedMode implements JsonSerializable
+{
+    public function __construct($value)
+    {
+        $this->value = $value;
+        $this->modeResources = new stdClass();
+        $this->modeResources->friendlyNames = array();
+    }
+    
+    public function add_modeResources($modeResources)
+    {
+        $this->modeResources = $modeResources;
+    }
+    
+    public function jsonSerialize() 
+    {
+        return get_object_vars($this);
+    }
+}
+
+/* End to other File */
+
+class AlexaCapabilityInterfaceModeController extends AlexaCapabilityInterface
+{
+    public function __construct($instance, $proactivelyReported = true, $retrievable = true, $nonControllable = false)
+    {
+	$this->interface = "Alexa.ModeController";
+	$this->instance = $instance;
+	$this->properties = new AlexaEndpointProperties("mode");
+	$this->properties->add_property("proactivelyReported", $proactivelyReported);
+	$this->properties->add_property("retrievable", $retrievable);
+	$this->properties->add_property("nonControllable", $nonControllable);
+    }
+    
+    public function add_capabilityResources($capabilityResources)
+    {
+        $this->capabilityResources = $capabilityResources;
+    }
+    
+    public function add_configuration($configuration)
+    {
+        $this->configuration = $configuration;
+    }
+};
+
 class AlexaCapabilityInterfaceSceneController implements JsonSerializable
 {
     private $type = "AlexaInterface";
