@@ -4,7 +4,6 @@ require_once(dirname(dirname(__FILE__)).'/alexa_smarthomeskill_api/alexa_discove
 require_once(dirname(dirname(__FILE__)).'/alexa_smarthomeskill_api/alexa_endpoint.php');
 require_once(dirname(dirname(__FILE__)).'/alexa_smarthomeskill_api/alexa_response.php');
 
-//function jalousie($endpoint, $friendlyName1, $friendlyName2)
 function jalousie($endpoint, $friendlyNames)
 {
     $capabilityResources = new AlexaCapabilityResources();
