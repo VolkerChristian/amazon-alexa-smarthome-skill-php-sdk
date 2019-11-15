@@ -52,7 +52,7 @@ else
                         case 'Diningtable.Jalousie':
                             exec("/usr/bin/ssh pi@werama aircontrol -t esstisch_up");
                             break;
-                        case 'Balkony.Jalousie':
+                        case 'Balcony.Jalousie':
                             exec("/usr/bin/ssh pi@werama aircontrol -t balkon_up");
                             break;
                         case 'Sleepingroom.Jalousie':
@@ -79,7 +79,7 @@ else
                         case 'Diningtable.Jalousie':
                             exec("/usr/bin/ssh pi@werama aircontrol -t esstisch_down");
                             break;
-                        case 'Balkony.Jalousie':
+                        case 'Balcony.Jalousie':
                             exec("/usr/bin/ssh pi@werama aircontrol -t balkon_down");
                             break;
                         case 'Sleepingroom.Jalousie':
