@@ -13,15 +13,19 @@ function jalousie($endpoint, $friendlyNames)
     }
     
     $modeResourcesOpen = new AlexaModeResources();
-    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("Öffnen"));
-    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("Auf"));
+    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("öffnen"));
+    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("auf"));
+    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("aufmachen"));
+    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("hoch"));
     
     $supportedModeOpen = new AlexaSupportedMode("Open");
     $supportedModeOpen->add_modeResources($modeResourcesOpen);
     
     $modeResourcesClose = new AlexaModeResources();
-    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("Schließen"));
-    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("Zu"));
+    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("schließen"));
+    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("zu"));
+    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("zumachen"));
+    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("runter"));
     
     $supportedModeClose = new AlexaSupportedMode("Close");
     $supportedModeClose->add_modeResources($modeResourcesClose);
@@ -34,7 +38,7 @@ function jalousie($endpoint, $friendlyNames)
     $modeController->add_capabilityResources($capabilityResources);
     $modeController->add_configuration($modeConfiguration);
     
-    $iot_dev = new AlexaEndpoint($endpoint.'Jalousie', $endpoint);
+    $iot_dev = new AlexaEndpoint($endpoint.'.Jalousie', $endpoint);
     $iot_dev->manufacturerName = "Werama";
     $iot_dev->description = "Werama Jalousien - made smart by Volker Christian";
     $iot_dev->add_displayCategories(AlexaEndpointDisplayCategories::OTHER);
@@ -56,8 +60,8 @@ function discover()
 {
     $devices = new AlexaEndpoints();
     
-    $devices->add(jalousie('Kitchen', array('Küche', 'Küchen Jalousie', 'Jalousie in Küche')));
-    $devices->add(jalousie('Street', array('Straße', 'Straßenseitige Jalousie', 'Jalousie auf Straßenseite')));
+    $devices->add(jalousie('Kitchen', array('Küche', 'Küche Jalousie', 'Jalousie in Küche')));
+    $devices->add(jalousie('Street', array('Straße', 'straßenseitige Jalousie', 'Jalousie auf Straßenseite')));
     $devices->add(jalousie('Diningtable', array('Esstisch', 'Esstisch Jalousie', 'Jalousie bei Esstisch')));
     $devices->add(jalousie('Balcony', array('Balkon', 'Balkon Jalousie', 'Jalousie bei Balkon')));
     $devices->add(jalousie('Sleepingroom', array('Schlafzimmer', 'Schlafzimmer Jalousie', 'Jalousie im Schlafzimmer')));
