@@ -34,23 +34,35 @@ else
             
             if($alexa_control->todo() =='SetMode') 
             {
+                $contextProperty = new AlexaContextProperty("Alexa.ModeController", "mode", $alexa_control->payload->mode, 500);
+                $contextProperty->instance = $alexa_control->header->instance;
+                $context->add_property($contextProperty);
+                $state = new AlexaAsyncResponse($context, $alexa_control->scope()->token, $alexa_control->endpoint->endpointId, $alexa_control->correlationToken());
+                
                 if($alexa_control->payload->mode == 'Open')
                 {
                     switch($alexa_control->endpoint->endpointId)
                     {
                         case 'Kitchen.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t kueche_up");
                             break;
                         case 'Street.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t strasse_up");
                             break;
                         case 'Diningtable.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t esstisch_up");
                             break;
                         case 'Balkony.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t balkon_up");
                             break;
                         case 'Sleepingroom.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t schlafzimmer_up");
                             break;
                         case 'Homeoffice.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t arbeitszimmer_up");
                             break;
                         default:
+                            $state = new AlexaErrorResponse($alexa_control->endpoint->endpointId, $err->type, $err->msg);
                             break;
                     }
                 }
@@ -59,25 +71,28 @@ else
                     switch($alexa_control->endpoint->endpointId)
                     {
                         case 'Kitchen.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t kueche_down");
                             break;
                         case 'Street.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t strasse_down");
                             break;
                         case 'Diningtable.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t esstisch_down");
                             break;
                         case 'Balkony.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t balkon_down");
                             break;
                         case 'Sleepingroom.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t schlafzimmer_down");
                             break;
                         case 'Homeoffice.Jalousie':
+                            exec("/usr/bin/ssh pi@werama aircontrol -t arbeitszimmer_down");
                             break;
                         default:
+                            $state = new AlexaErrorResponse($alexa_control->endpoint->endpointId, $err->type, $err->msg);
                             break;
                     }
                 }
-                $contextProperty = new AlexaContextProperty("Alexa.ModeController", "mode", $alexa_control->payload->mode, 500);
-                $contextProperty->instance = $alexa_control->header->instance;
-                $context->add_property($contextProperty);
-                $state = new AlexaAsyncResponse($context, $alexa_control->scope()->token, $alexa_control->endpoint->endpointId, $alexa_control->correlationToken());
             }
             break;
         case 'Alexa.SceneController':
