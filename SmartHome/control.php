@@ -77,7 +77,7 @@ else
                 $contextProperty = new AlexaContextProperty("Alexa.ModeController", "mode", $alexa_control->payload->mode, 500);
                 $contextProperty->instance = $alexa_control->header->instance;
                 $context->add_property($contextProperty);
-                $state = new AlexaAsyncResponse($context, $alexa_control->scope()->token, $alexa_control->endpoint->endpointId, $alexa_control->correlationToken() );
+                $state = new AlexaAsyncResponse($context, $alexa_control->scope()->token, $alexa_control->endpoint->endpointId, $alexa_control->correlationToken());
             }
             break;
         case 'Alexa.SceneController':
