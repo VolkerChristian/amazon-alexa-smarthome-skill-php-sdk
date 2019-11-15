@@ -252,9 +252,9 @@ class AlexaFriendlyName implements JsonSerializable
 
 class AlexaModeConfiguration implements JsonSerializable
 {
-    public function __construct()
+    public function __construct($ordered = 'false')
     {
-        $this->ordered = 'false';
+        $this->ordered = $ordered;
         $this->supportedModes = array();
     }
     
@@ -275,7 +275,6 @@ class AlexaSupportedMode implements JsonSerializable
     {
         $this->value = $value;
         $this->modeResources = new stdClass();
-        $this->modeResources->friendlyNames = array();
     }
     
     public function add_modeResources($modeResources)

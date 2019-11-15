@@ -17,15 +17,10 @@ class AlexaContextProperty implements JsonSerializable
         $this->timeOfSample = date("c", time());//gmdate("Y-m-d\TH:i:s.52\Z");
     }
 
-    public function jsonSerialize() 
+    public function jsonSerialize()
     {
-        return ['namespace' => $this->namespace,
-                'name' => $this->name,
-                'value' => $this->value,
-                'timeOfSample' => $this->timeOfSample,
-                'uncertaintyInMilliseconds' => $this->uncertaintyInMilliseconds
-            ];
-    }
+        return get_object_vars($this);
+        }
 };
 
 class AlexaContextPropertyValue implements JsonSerializable  

@@ -16,14 +16,14 @@ function jalousie($endpoint, $friendlyNames)
     $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("Öffnen"));
     $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("Auf"));
     
-    $supportedModeOpen = new AlexaSupportedMode($endpoint.".Open");
+    $supportedModeOpen = new AlexaSupportedMode("Open");
     $supportedModeOpen->add_modeResources($modeResourcesOpen);
     
     $modeResourcesClose = new AlexaModeResources();
     $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("Schließen"));
     $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("Zu"));
     
-    $supportedModeClose = new AlexaSupportedMode($endpoint.'.Close');
+    $supportedModeClose = new AlexaSupportedMode("Close");
     $supportedModeClose->add_modeResources($modeResourcesClose);
     
     $modeConfiguration = new AlexaModeConfiguration();
