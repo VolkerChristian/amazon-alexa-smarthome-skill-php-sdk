@@ -36,7 +36,7 @@ else
             {
                 if($alexa_control->payload->mode == 'Open')
                 {
-                    switch($alexa_control->endpoint->endpointID)
+                    switch($alexa_control->endpoint->endpointId)
                     {
                         case 'Kitchen.Jalousie':
                             break;
@@ -56,7 +56,7 @@ else
                 }
                 if($alexa_control->payload->mode == 'Close')
                 {
-                    switch($alexa_control->endpoint->endpointID)
+                    switch($alexa_control->endpoint->endpointId)
                     {
                         case 'Kitchen.Jalousie':
                             break;
@@ -80,7 +80,7 @@ else
                 $state = new AlexaAsyncResponse($context, $alexa_control->scope()->token, $alexa_control->endpoint->endpointId, $alexa_control->correlationToken() );
             }
             break;
-        case: 'Alexa.SceneController':
+        case 'Alexa.SceneController':
             break;
     }
     echo json_encode($state);
@@ -137,6 +137,5 @@ else
         break;
     }
 */
-}
 
 ?>

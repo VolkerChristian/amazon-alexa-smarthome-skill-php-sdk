@@ -110,6 +110,7 @@ class AlexaAsyncResponse extends AlexaResponse
     {
         //$payload = new AlexaChangeReportPayload(new AlexaContextProperty($namespace, $name, $value, intval($uncertaintyms)), $change_type);
         $header = new AlexaHeader("Alexa", "Response", $correlationToken);
+        $payload = new stdClass();
         $this->event = new AlexaEvent($header, $payload);
         $this->event->endpoint = new AlexaStateEndpoint($scope_token, $endpointId);
         $this->context = $context;
