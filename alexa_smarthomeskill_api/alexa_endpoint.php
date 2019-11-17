@@ -14,7 +14,9 @@ class AlexaEndpointDisplayCategories
     const SWITCH_ALEXA = 'SWITCH';
     const TEMPERATURE_SENSOR = 'TEMPERATURE_SENSOR';
     const THERMOSTAT = 'THERMOSTAT';
-    const TV = 'TV';    
+    const TV = 'TV';
+    const INTERIOR_BLIND = 'INTERIOR_BLIND';
+    const EXTERIOR_BLIND = 'EXTERIOR_BLIND';
 };
 
 class AlexaEndpointCookies implements JsonSerializable  
@@ -237,8 +239,15 @@ class AlexaFriendlyName implements JsonSerializable
     {
         $this->type = $type;
         $this->value = (object)array();
-        $this->value->text = $text;
-        $this->value->locale = $locale;
+        if ($this->type == 'asset')
+        {
+            $this->value->assetId = $text;
+        } 
+        elseif ($this->type == 'text')
+        {
+            $this->value->text = $text;
+            $this->value->locale = $locale;
+        }
     }
     
     public function jsonSerialize()

@@ -13,19 +13,21 @@ function jalousie($endpoint, $friendlyNames)
     }
     
     $modeResourcesOpen = new AlexaModeResources();
-    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("öffnen"));
-    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("auf"));
-    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("aufmachen"));
-    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("hoch"));
+    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName('Alexa.Value.Open', 'asset'));
+//    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("öffnen"));
+//    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("auf"));
+//    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("aufmachen"));
+//    $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("hoch"));
     
     $supportedModeOpen = new AlexaSupportedMode("Open");
     $supportedModeOpen->add_modeResources($modeResourcesOpen);
     
     $modeResourcesClose = new AlexaModeResources();
-    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("schließen"));
-    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("zu"));
-    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("zumachen"));
-    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("runter"));
+    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName('Alexa.Value.Close', 'asset'));
+//    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("schließen"));
+//    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("zu"));
+//    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("zumachen"));
+//    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("runter"));
     
     $supportedModeClose = new AlexaSupportedMode("Close");
     $supportedModeClose->add_modeResources($modeResourcesClose);
@@ -41,7 +43,7 @@ function jalousie($endpoint, $friendlyNames)
     $iot_dev = new AlexaEndpoint($endpoint.'.Jalousie', $endpoint);
     $iot_dev->manufacturerName = "Werama";
     $iot_dev->description = "Werama Jalousien - made smart by Volker Christian";
-    $iot_dev->add_displayCategories(AlexaEndpointDisplayCategories::OTHER);
+    $iot_dev->add_displayCategories(AlexaEndpointDisplayCategories::EXTERIOR_BLIND);
     $iot_dev->add_Capability($modeController);
     $iot_dev->add_capability(new AlexaCapabilityInterfaceAlexa());
 /*
