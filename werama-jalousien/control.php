@@ -21,7 +21,7 @@ $alexa_control = AlexaControlRequest::fromJSON($json_data);
 
 $string = file_get_contents(dirname(__FILE__).'/user.json');
 $user_data = json_decode($string);
-$user_check_failed = $user_data->payload->token != $alexa_control->scope->token;
+$user_check_failed = $user_data->payload->token != $alexa_control->scope()->token;
 
 if($user_check_faild)
 {
