@@ -12,11 +12,6 @@ $json_data = json_decode($req);
 
 header('Content-Type: application/json');
 
-$not_found = false; // change it to true if you wish device not found response
-//$user_check_faild = false; // change to true if you wish user credential error response
-
-
-
 $alexa_control = AlexaControlRequest::fromJSON($json_data);
 
 $string = file_get_contents(dirname(__FILE__).'/user.json');
