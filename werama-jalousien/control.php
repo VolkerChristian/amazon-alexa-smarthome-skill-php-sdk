@@ -13,9 +13,25 @@ $json_data = json_decode($req);
 header('Content-Type: application/json');
 
 $not_found = false; // change it to true if you wish device not found response
-$user_check_faild = false; // change to true if you wish user credential error response
+//$user_check_faild = false; // change to true if you wish user credential error response
+
+
+$string = file_get_contents(dirname(__FILE__).'/user.json');
+$user_data = json_decode($string, true);
+
 
 $alexa_control = AlexaControlRequest::fromJSON($json_data);
+
+$user_check_failed = $user_data->payload->token != $json_data->directive->endpoint->scope->token;
+
+if($user_check_faild)
+{
+    $err = new AlexaError(AlexaErrorTypes::INVALID_AUTHORIZATION_CREDENTIAL);
+    $resp_error = new AlexaErrorResponse($alexa_control->endpoint->endpointId, $err->type, $err->msg);
+    echo json_encode($resp_error);
+    exit();
+}
+
 if($alexa_control == null)
 {
     //this should not happen. Maybe log error somewhere
