@@ -16,13 +16,12 @@ $not_found = false; // change it to true if you wish device not found response
 //$user_check_faild = false; // change to true if you wish user credential error response
 
 
-$string = file_get_contents(dirname(__FILE__).'/user.json');
-$user_data = json_decode($string, true);
-
 
 $alexa_control = AlexaControlRequest::fromJSON($json_data);
 
-$user_check_failed = $user_data->payload->token != $json_data->directive->endpoint->scope->token;
+$string = file_get_contents(dirname(__FILE__).'/user.json');
+$user_data = json_decode($string);
+$user_check_failed = $user_data->payload->token != $alexa_control->scope->token;
 
 if($user_check_faild)
 {
