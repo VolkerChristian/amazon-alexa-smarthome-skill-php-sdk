@@ -62,12 +62,12 @@ function discover()
 {
     $devices = new AlexaEndpoints();
     
-    $devices->add(jalousie('Kitchen', 'Küche', array('Küchen Jalousie', 'Jalousie in Küche')));
-    $devices->add(jalousie('Street', 'Straßenseite', array('straßenseite Jalousie', 'Jalousie auf Straßenseite')));
-    $devices->add(jalousie('Diningtable', 'Esstisch', array('Esstisch Jalousie', 'Jalousie bei Esstisch')));
-    $devices->add(jalousie('Balcony', 'Balkon', array('Balkon Jalousie', 'Jalousie bei Balkon')));
-    $devices->add(jalousie('Sleepingroom', 'Schlafzimmer', array('Schlafzimmer Jalousie', 'Jalousie im Schlafzimmer')));
-    $devices->add(jalousie('Homeoffice', 'Arbeitszimmer', array('Arbeitszimmer Jalousie', 'Jalousie im Arbeitszimmer')));
+    $devices->add(jalousie('Kitchen', 'Küche', array('Küchen Jalousie', 'Küchen Jalousien', 'Jalousie in Küche', 'Jalousien Küche')));
+    $devices->add(jalousie('Street', 'Straßenseite', array('Straßenseite Jalousie', 'Straßenseite Jalousien', 'Jalousie auf Straßenseite', 'Jalousien auf Straßenseite')));
+    $devices->add(jalousie('Diningtable', 'Esstisch', array('Esstisch Jalousie', 'Esstisch Jalousien', 'Jalousie bei Esstisch', 'Jalousien bei Esstisch')));
+    $devices->add(jalousie('Balcony', 'Balkon', array('Balkon Jalousie', 'Balkon Jalousien', 'Jalousie bei Balkon', 'Jalousien bei Balkon')));
+    $devices->add(jalousie('Sleepingroom', 'Schlafzimmer', array('Schlafzimmer Jalousie', 'Schlafzimmer Jalousien', 'Jalousie im Schlafzimmer', 'Jalousien im Schlafzimmer')));
+    $devices->add(jalousie('Homeoffice', 'Arbeitszimmer', array('Arbeitszimmer Jalousie', 'Arbeitszimmer Jalousien', 'Jalousie im Arbeitszimmer', 'Jalousien im Arbeitszimmer')));
 
     $devices_response = new AlexaDiscoveryResponse($devices);
 
