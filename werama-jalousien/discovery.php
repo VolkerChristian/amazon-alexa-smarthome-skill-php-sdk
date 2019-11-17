@@ -20,6 +20,10 @@ if($alexa_discovery == null)
 }
 else
 {
+    $fp = fopen(dirname(__FILE__).'/user.json', 'w');
+    fwrite($fp, json_encode($alexa_discovery));
+    fclose($fp);
+    
     echo discover();
 }
 
