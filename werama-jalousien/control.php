@@ -14,9 +14,13 @@ header('Content-Type: application/json');
 
 $alexa_control = AlexaControlRequest::fromJSON($json_data);
 
-$string = file_get_contents(dirname(__FILE__).'/user.json');
-$user_data = json_decode($string);
-$user_check_faild = $user_data->payload->token != $alexa_control->scope()->token;
+$local_user = file_get_contents(dirname(__FILE__).'/user.json');
+$local_user_data = json_decode($user);
+
+$oauth_user = file_get_contents('https://api.amazon.com/user/profile?access_token='.$alexa_control->scope()->token);
+$oauth_user_data = json_decode($oauth_user);
+
+$user_check_faild = $local_user_data->amazon_user_id != $oauth_user_data->user_id;
 
 if($user_check_faild)
 {
