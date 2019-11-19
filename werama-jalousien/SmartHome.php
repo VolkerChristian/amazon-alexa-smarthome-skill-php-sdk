@@ -44,7 +44,7 @@ function jalousie($endpoint, $friendlyName, $friendlyNames)
     $iot_dev->manufacturerName = "Werama";
     $iot_dev->description = "Werama Jalousien - made smart by Volker Christian";
     $iot_dev->add_displayCategories(AlexaEndpointDisplayCategories::EXTERIOR_BLIND);
-    $iot_dev->add_Capability($modeController);
+    $iot_dev->add_capability($modeController);
     $iot_dev->add_capability(new AlexaCapabilityInterfaceAlexa());
 /*
     $iot_dev->add_capability(new AlexaCapabilityInterfaceEndpointHealth());
@@ -55,6 +55,20 @@ function jalousie($endpoint, $friendlyName, $friendlyNames)
     $cookies->add_cookie("warning", "but dont store any confidential information here");
     $iot_dev->set_cookie($cookies);
 */
+    return $iot_dev;
+}
+
+function comfort($endpoint, $friendlyName)
+{
+    $sceneController = new AlexaCapabilityInterfaceSceneController();
+    $sceneController->supportsDeactivation = false;
+    $sceneController->proactivelyReported = false;
+    $iot_dev = new AlexaEndpoint($endpoint, $friendlyName);
+    $iot_dev->manufacturerName = "Werama";
+    $iot_dev->description = "Werama Jalousien - made smart by Volker Christian";
+    $iot_dev->add_displayCategories(AlexaEndpointDisplayCategories::SCENE_TRIGGER);
+    $iot_dev->add_capability($sceneController);
+    
     return $iot_dev;
 }
 
@@ -69,6 +83,12 @@ function discover()
     $devices->add(jalousie('Sleepingroom', 'Schlafzimmer', array('Schlafzimmer Jalousie', 'Schlafzimmer Jalousien', 'Jalousie im Schlafzimmer', 'Jalousien im Schlafzimmer')));
     $devices->add(jalousie('Homeoffice', 'Arbeitszimmer', array('Arbeitszimmer Jalousie', 'Arbeitszimmer Jalousien', 'Jalousie im Arbeitszimmer', 'Jalousien im Arbeitszimmer')));
 
+    $devices->add(comfort('Comfort.Close', 'Jalousien schließen'));
+    $devices->add(comfort('Comfort.Open', 'Jalousien öffnen'));
+    
+    $devices->add(comfort('All.Close', 'Alle Jalousien schließen'));
+    $devices->add(comfort('All.Open', 'Alle Jalousien öffnen'));
+    
     $devices_response = new AlexaDiscoveryResponse($devices);
 
     echo json_encode($devices_response);
