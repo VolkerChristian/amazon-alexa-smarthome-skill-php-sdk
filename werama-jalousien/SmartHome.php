@@ -83,7 +83,7 @@ function discover()
     $devices->add(jalousie('Sleepingroom', 'Schlafzimmer', array('Schlafzimmer Jalousie', 'Schlafzimmer Jalousien', 'Jalousie im Schlafzimmer')));
     $devices->add(jalousie('Homeoffice', 'Arbeitszimmer', array('Arbeitszimmer Jalousie', 'Arbeitszimmer Jalousien', 'Jalousie im Arbeitszimmer')));*/
     $devices->add(jalousie('Blinds', 'Jalousien', array('Rollos')));
-    $devices->add(jalousie('AllBlinds', 'alle Jalousien', array('alle Rollos')));
+//    $devices->add(jalousie('AllBlinds', 'alle Jalousien', array('alle Rollos')));
 
     /*
     $devices->add(comfort('Comfort.Close', 'Jalousien schließen'));
