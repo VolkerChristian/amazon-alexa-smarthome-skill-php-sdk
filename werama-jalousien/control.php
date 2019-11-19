@@ -75,6 +75,10 @@ else
                         case 'Homeoffice.Jalousie':
                             exec("/usr/bin/ssh pi@werama aircontrol -t arbeitszimmer_up");
                             break;
+                        case 'Blinds.Jalousie':
+                            break;
+                        case 'AllBlinds.Jalousie':
+                            break;
                         default:
                             $state = new AlexaErrorResponse($alexa_control->endpoint->endpointId, $err->type, $err->msg);
                             break;
@@ -101,6 +105,10 @@ else
                             break;
                         case 'Homeoffice.Jalousie':
                             exec("/usr/bin/ssh pi@werama aircontrol -t arbeitszimmer_down");
+                            break;
+                        case 'Blinds.Jalousie':
+                            break;
+                        case 'AllBlinds.Jalousie':
                             break;
                         default:
                             $state = new AlexaErrorResponse($alexa_control->endpoint->endpointId, $err->type, $err->msg);
