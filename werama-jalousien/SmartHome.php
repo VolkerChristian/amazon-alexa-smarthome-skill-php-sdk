@@ -83,12 +83,16 @@ function discover()
     $devices->add(jalousie('Sleepingroom', 'Schlafzimmer', array('Schlafzimmer Jalousie', 'Schlafzimmer Jalousien', 'Jalousie im Schlafzimmer', 'Jalousien im Schlafzimmer')));
     $devices->add(jalousie('Homeoffice', 'Arbeitszimmer', array('Arbeitszimmer Jalousie', 'Arbeitszimmer Jalousien', 'Jalousie im Arbeitszimmer', 'Jalousien im Arbeitszimmer')));
 
+    $devices->add(jalousie('Blinds', 'Jalousien', array()));
+    $devices->add(jalousie('AllBlinds', 'Alle Jalousien', array()));
+
+    /*
     $devices->add(comfort('Comfort.Close', 'Jalousien schließen'));
     $devices->add(comfort('Comfort.Open', 'Jalousien öffnen'));
     
     $devices->add(comfort('All.Close', 'Alle Jalousien schließen'));
     $devices->add(comfort('All.Open', 'Alle Jalousien öffnen'));
-    
+    */
     $devices_response = new AlexaDiscoveryResponse($devices);
 
     echo json_encode($devices_response);
