@@ -17,10 +17,19 @@ $alexa_control = AlexaControlRequest::fromJSON($json_data);
 $local_user = file_get_contents(dirname(__FILE__).'/user.json');
 $local_user_data = json_decode($local_user);
 
-$oauth_user = file_get_contents('https://api.amazon.com/user/profile?access_token='.$alexa_control->scope()->token);
+$opts = [
+    "http" => [
+        "method" => "GET",
+        "header" => "Authorization: Bearer " . $alexa_control->scope()->token . "\r\n"
+    ]
+];
+
+$context = stream_context_create($opts);
+
+$oauth_user = file_get_contents('https://cloud.vchrist.at/ocs/v2.php/cloud/user?format=json', false, $context);
 $oauth_user_data = json_decode($oauth_user);
 
-$user_check_faild = $local_user_data->amazon_user_id != $oauth_user_data->user_id;
+$user_check_faild = $local_user_data->ocs->data->id != $oauth_user_data->ocs->data->id;
 
 if($user_check_faild)
 {

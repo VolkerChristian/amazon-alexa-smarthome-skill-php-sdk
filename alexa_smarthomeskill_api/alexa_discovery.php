@@ -25,9 +25,6 @@ class AlexaDiscoveryRequest
     {        
         $this->header = new AlexaHeader($object->directive->header);
         $this->payload = new AlexaDiscoveryRequestPayloadScope($object->directive->payload->scope);
-        $this->amazon_user_id = $object->amazon_user->user_id;
-        $this->amazon_name = $object->amazon_user->name;
-        $this->amazon_email = $object->amazon_user->email;
     }
 };
 
