@@ -31,7 +31,7 @@ else
 
     $oauth_user = file_get_contents('https://cloud.vchrist.at/ocs/v2.php/cloud/user?format=json', false, $context);
     $fp = fopen(dirname(__FILE__).'/user.json', 'w');
-    fwrite($fp, json_encode($oauth_user));
+    fwrite($fp, $oauth_user);
     fclose($fp);
     
     echo discover();
