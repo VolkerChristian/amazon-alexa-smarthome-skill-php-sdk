@@ -23,7 +23,7 @@ else
     $opts = [
         "http" => [
             "method" => "GET",
-            "header" => "Authorization: Bearer " . $alexa_discover->payload->scope->token . "\r\n"
+            "header" => "Authorization: Bearer " . $alexa_discovery->payload->scope->token . "\r\n"
         ]
     ];
 
