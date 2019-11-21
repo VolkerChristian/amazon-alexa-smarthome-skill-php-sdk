@@ -1,0 +1,85 @@
+{
+	"jalousien": {
+		"Kitchen": {
+			"friendlyName": "Küche",
+			"friendlyNames": [
+				"Küche Jalousie",
+				"Jalousie in Küche",
+				"Jalousien Küche"
+			],
+			"up": "kueche_up",
+			"down": "kueche_down"
+		},
+		"Street": {
+			"friendlyName": "Straßenseite",
+			"friendlyNames": [
+				"Straßenseitige Jalousien",
+				"Straßenseite Jalousien",
+				"Jalousie auf Straßenseite",
+				"Jalousien auf Straßenseite"
+			],
+			"up": "strasse_up",
+			"down": "strasse_down"
+		},
+		"Diningtable": {
+			"friendlyName": "Esstisch",
+			"friendlyNames": [
+				"Esstisch Jalousie",
+				"Esstisch Jalousien",
+				"Jalousie bei Esstisch",
+				"Jalousien bei Esstisch"
+			],
+			"up": "esstisch_up",
+			"down": "esstisch_down"
+		},
+		"Balcony": {
+			"friendlyName": "Balkon",
+			"friendlyNames": [
+				"Balkon Jalousie",
+				"Balkon Jalousien",
+				"Jalousie bei Balkon",
+				"Jalousien bei Balkon"
+			],
+			"up": "balkon_up",
+			"down": "balkon_down"
+		},
+		"Sleepingroom": {
+			"friendlyName": "Schlafzimmer",
+			"friendlyNames": [
+				"Schlafzimmer Jalousie",
+				"Schlafzimmer Jalousien",
+				"Jalousie im Schlafzimmer",
+				"Jalousie im Schlafzimmer"
+			],
+			"up": "schlafzimmer_up",
+			"down": "schlafzimmer_down"
+		},
+		"HomeOffice": {
+			"friendlyName": "Arbeitszimmer",
+			"friendlyNames": [
+				"Arbeitszimmer Jalousie",
+				"Arbeitszimmer Jalousien",
+				"Jalousie im Arbeitszimmer",
+				"Jalousien im Arbeitszimmer"
+			],
+			"up": "arbeitszimmer_up",
+			"down": "arbeitszimmer_down"
+		},
+		"Blinds": {
+			"friendlyName": "Jalousien",
+			"friendlyNames": [
+				"Rollos"
+			],
+			"up": "komfort_up",
+			"down": "komfort_down"
+		},
+		"AllBlinds": {
+			"friendlyName": "alle Rollos",
+			"friendlyNames": [
+				"alle Jalousien"
+			],
+			"up": "alle_up",
+			"down": "alle_down"
+		}
+	}
+}
