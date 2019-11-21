@@ -8,13 +8,10 @@ class AlexaDiscoveryRequest
 {
     public $header = null;
     public $payload = null;
-    public $amazon_user_id;
-    public $amazon_name;
-    public $amazon_email;
 
     public static function fromJSON(stdClass &$object)
     {
-        if(!isset($object->directive) || !isset($object->amazon_user))
+        if(!isset($object->directive))
         {
             return null;
         }
