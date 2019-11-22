@@ -93,6 +93,7 @@ function discover()
     $devices->add(comfort('All.Close', 'Alle Jalousien schließen'));
     $devices->add(comfort('All.Open', 'Alle Jalousien öffnen'));
     */
+    
     $devices_response = new AlexaDiscoveryResponse($devices);
 
     echo json_encode($devices_response);

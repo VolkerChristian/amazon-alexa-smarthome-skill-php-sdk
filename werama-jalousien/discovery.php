@@ -16,7 +16,6 @@ $alexa_discovery = AlexaDiscoveryRequest::fromJSON($json_data);
 if($alexa_discovery == null)
 {
     echo json_encode(new AlexaDiscoveryResponse(null));
-    exit();
 }
 else
 {
@@ -28,12 +27,17 @@ else
     ];
     $context = stream_context_create($opts);
     $oauth_user = file_get_contents('https://cloud.vchrist.at/ocs/v2.php/cloud/user?format=json', false, $context);
-
-    $fp = fopen(dirname(__FILE__).'/user.json', 'w');
-    fwrite($fp, $oauth_user);
-    fclose($fp);
     
-    echo discover();
+    $user_check_faild = $oauth_user_data->ocs->meta->message != "OK" || !in_array("Amazon", $oauth_user_data->ocs->data->groups);
+    
+    if ($user_check_faild)
+    {
+        echo json_encode(new AlexaDiscoveryResponse(null));
+    }
+    else
+    {
+        echo discover();
+    }
 }
 
 ?>
