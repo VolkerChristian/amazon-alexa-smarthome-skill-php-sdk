@@ -18,7 +18,6 @@ function jalousie($endpoint, $friendlyName, $friendlyNames)
     $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("auf"));
     $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("aufmachen"));
     $modeResourcesOpen->add_friendlyName(new AlexaFriendlyName("hoch"));
-    
     $supportedModeOpen = new AlexaSupportedMode("Open");
     $supportedModeOpen->add_modeResources($modeResourcesOpen);
     
@@ -28,13 +27,20 @@ function jalousie($endpoint, $friendlyName, $friendlyNames)
     $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("zu"));
     $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("zumachen"));
     $modeResourcesClose->add_friendlyName(new AlexaFriendlyName("runter"));
-    
     $supportedModeClose = new AlexaSupportedMode("Close");
     $supportedModeClose->add_modeResources($modeResourcesClose);
+    
+    $modeResourcesStop = new AlexaModeResources();
+//    $modeResourcesClose->add_friendlyName(new AlexaFriendlyName('Alexa.Value.Close', 'asset'));
+    $modeResourcesStop->add_friendlyName(new AlexaFriendlyName("stopp"));
+    $modeResourcesStop->add_friendlyName(new AlexaFriendlyName("halt"));
+    $supportedModeStop = new AlexaSupportedMode("Stop");
+    $supportedModeStop->add_modeResources($modeResourcesStop);
     
     $modeConfiguration = new AlexaModeConfiguration();
     $modeConfiguration->add_supportedMode($supportedModeOpen);
     $modeConfiguration->add_supportedMode($supportedModeClose);
+    $modeConfiguration->add_supportedMode($supportedModeStop);
     
     $modeController = new AlexaCapabilityInterfaceModeController("Jalousie.".$endpoint, false, false);
     $modeController->add_capabilityResources($capabilityResources);

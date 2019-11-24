@@ -118,6 +118,40 @@ else
                                 break;
                         }
                     }
+                    else if($alexa_control->payload->mode == 'Stop')
+                    {
+                        switch($alexa_control->endpoint->endpointId)
+                        {
+                            case 'Kitchen.Jalousie':
+                                exec("/usr/bin/ssh pi@werama aircontrol -t kueche_stop");
+                                break;
+                            case 'Street.Jalousie':
+                                exec("/usr/bin/ssh pi@werama aircontrol -t strasse_stop");
+                                break;
+                            case 'Diningtable.Jalousie':
+                                exec("/usr/bin/ssh pi@werama aircontrol -t esstisch_stop");
+                                break;
+                            case 'Balcony.Jalousie':
+                                exec("/usr/bin/ssh pi@werama aircontrol -t balkon_stop");
+                                break;
+                            case 'Sleepingroom.Jalousie':
+                                exec("/usr/bin/ssh pi@werama aircontrol -t schlafzimmer_stop");
+                                break;
+                            case 'Homeoffice.Jalousie':
+                                exec("/usr/bin/ssh pi@werama aircontrol -t arbeitszimmer_stop");
+                                break;
+                            case 'Blinds.Jalousie':
+                                exec("/usr/bin/ssh pi@werama aircontrol -t komfort_stop");
+                                break;
+                            case 'AllBlinds.Jalousie':
+                                exec("/usr/bin/ssh pi@werama aircontrol -t alle_stop");
+                                break;
+                            default:
+                                $err = new AlexaError(AlexaErrorTypes::NO_SUCH_ENDPOINT);
+                                $state = new AlexaErrorResponse($alexa_control->endpoint->endpointId, $err->type, $err->msg);
+                                break;
+                        }
+                    }
                     else
                     {
                         $err = new AlexaError(AlexaErrorTypes::INVALID_VALUE);
