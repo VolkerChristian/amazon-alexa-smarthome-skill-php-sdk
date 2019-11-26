@@ -38,6 +38,7 @@ else
     else
     {
         echo discover($alexa_discovery->payload->token);
+//        echo discover();
     }
 }
 
