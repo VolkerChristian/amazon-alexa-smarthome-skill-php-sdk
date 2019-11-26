@@ -27,7 +27,7 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t kueche_down",
+                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t kueche_stop",
                                 "friendlyNames" : [
                                     "stopp",
                                     "halt"
@@ -63,7 +63,7 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t strasse_down",
+                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t strasse_stop",
                                 "friendlyNames" : [
                                     "stopp",
                                     "halt"
@@ -99,7 +99,7 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t esstisch_down",
+                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t esstisch_stop",
                                 "friendlyNames" : [
                                     "stopp",
                                     "halt"
@@ -135,7 +135,7 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t balkon_down",
+                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t balkon_stop",
                                 "friendlyNames" : [
                                     "stopp",
                                     "halt"
@@ -171,7 +171,7 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t schlafzimmer_down",
+                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t schlafzimmer_stop",
                                 "friendlyNames" : [
                                     "stopp",
                                     "halt"
@@ -207,7 +207,7 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t arbeitszimmer_down",
+                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t arbeitszimmer_stop",
                                 "friendlyNames" : [
                                     "stopp",
                                     "halt"
