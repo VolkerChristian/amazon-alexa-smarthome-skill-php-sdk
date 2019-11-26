@@ -5,18 +5,27 @@
 
     function discover($token)
     {
-        $opts = [
-            "http" => [
-                "method" => "GET",
-            "header" => "Authorization: Bearer " . $token . "\r\n"
-            ]
-        ];
-        $context = stream_context_create($opts);
-        $jalousien = file_get_contents('http://cloud.vchrist.at/remote.php/webdav/SmartHome/Warema/jalousien.json', false, $context);
-        $fp = fopen('jalousien.json', 'w');
-        fwrite($fp, $jalousien);
-        fclose($fp);
-    
+        if ($token != "none")
+        {
+            $opts = [
+                "http" => [
+                    "method" => "GET",
+                "header" => "Authorization: Bearer " . $token . "\r\n"
+                ]
+            ];
+            $context = stream_context_create($opts);
+            $jalousien = file_get_contents('http://cloud.vchrist.at/remote.php/webdav/SmartHome/Warema/jalousien.json', false, $context);
+            $fp = fopen('jalousien.json', 'w');
+            fwrite($fp, $jalousien);
+            fclose($fp);
+        }
+        else
+        {
+            $fp = fopen('jalousien.json', 'r');
+            $jalousien = fread($fp, filesize('jalousien.json'));
+            fclose($fp);
+        }
+        
         $json = json_decode($jalousien);
         
         $devices = new AlexaEndpoints();
@@ -46,8 +55,8 @@
             $modeController->add_configuration($modeConfiguration);
             
             $iot_dev = new AlexaEndpoint($endpoint, $endpoint_value->friendlyName);
-            $iot_dev->manufacturerName = "Warema";
-            $iot_dev->description = "Warema Jalousien - made smart by Volker Christian";
+            $iot_dev->manufacturerName = "Werama";
+            $iot_dev->description = "Werama Jalousien - made smart by Volker Christian";
             $iot_dev->add_displayCategories(AlexaEndpointDisplayCategories::EXTERIOR_BLIND);
             $iot_dev->add_capability($modeController);
             $iot_dev->add_capability(new AlexaCapabilityInterfaceAlexa());
@@ -65,6 +74,6 @@
 
     if (!isset ($called))
     {
-        echo discover();
+        echo discover("none");
     }
 ?>

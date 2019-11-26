@@ -1,6 +1,6 @@
 {
 	"jalousien": {
-		"Kitchen": {
+		"Kitchen.Jalousie": {
 			"friendlyName": "Küche",
 			"friendlyNames": [
 				"Küche Jalousie",
@@ -35,7 +35,7 @@
                             }
                         }
 		},
-		"Street": {
+		"Street.Jalousie": {
 			"friendlyName": "Straßenseite",
 			"friendlyNames": [
 				"Straßenseitige Jalousien",
@@ -71,7 +71,7 @@
                             }
                         }
 		},
-		"Diningtable": {
+		"Diningtable.Jalousie": {
 			"friendlyName": "Esstisch",
 			"friendlyNames": [
 				"Esstisch Jalousie",
@@ -107,7 +107,7 @@
                             }
                         }
 		},
-		"Balcony": {
+		"Balcony.Jalousie": {
 			"friendlyName": "Balkon",
 			"friendlyNames": [
 				"Balkon Jalousie",
@@ -143,7 +143,7 @@
                             }
                         }
 		},
-		"Sleepingroom": {
+		"Sleepingroom.Jalousie": {
 			"friendlyName": "Schlafzimmer",
 			"friendlyNames": [
 				"Schlafzimmer Jalousie",
@@ -179,7 +179,7 @@
                             }
                         }
 		},
-		"HomeOffice": {
+		"HomeOffice.Jalousie": {
 			"friendlyName": "Arbeitszimmer",
 			"friendlyNames": [
 				"Arbeitszimmer Jalousie",
@@ -215,7 +215,7 @@
                             }
                         }
 		},
-		"Blinds": {
+		"Blinds.Jalousie": {
 			"friendlyName": "Jalousien",
 			"friendlyNames": [
 				"Rollos"
@@ -248,7 +248,7 @@
                             }
                         }
 		},
-		"AllBlinds": {
+		"AllBlinds.Jalousie": {
 			"friendlyName": "alle Rollos",
 			"friendlyNames": [
 				"alle Jalousien"
