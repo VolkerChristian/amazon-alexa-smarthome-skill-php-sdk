@@ -7,8 +7,33 @@
 				"Jalousie in Küche",
 				"Jalousien Küche"
 			],
-			"up": "kueche_up",
-			"down": "kueche_down"
+			"SetMode" : {
+                            "Open": {
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t kueche_up",
+                                "friendlyNames" : [
+                                    "öffnen",
+                                    "auf",
+                                    "aufmachen",
+                                    "hoch"
+                                ]
+                            },
+                            "Close": {
+                                "command" : "kueche_down",
+                                "friendlyNames" : [
+                                    "schließen",
+                                    "zu",
+                                    "zumachen",
+                                    "runter"
+                                ]
+                            },
+                            "Stop": {
+                                "command" : "kueche_down",
+                                "friendlyNames" : [
+                                    "stopp",
+                                    "halt"
+                                ]
+                            }
+                        }
 		},
 		"Street": {
 			"friendlyName": "Straßenseite",
@@ -18,8 +43,33 @@
 				"Jalousie auf Straßenseite",
 				"Jalousien auf Straßenseite"
 			],
-			"up": "strasse_up",
-			"down": "strasse_down"
+			"SetMode" : {
+                            "Open": {
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t strasse_up",
+                                "friendlyNames" : [
+                                    "öffnen",
+                                    "auf",
+                                    "aufmachen",
+                                    "hoch"
+                                ]
+                            },
+                            "Close": {
+                                "command" : "strasse_down",
+                                "friendlyNames" : [
+                                    "schließen",
+                                    "zu",
+                                    "zumachen",
+                                    "runter"
+                                ]
+                            },
+                            "Stop": {
+                                "command" : "strasse_down",
+                                "friendlyNames" : [
+                                    "stopp",
+                                    "halt"
+                                ]
+                            }
+                        }
 		},
 		"Diningtable": {
 			"friendlyName": "Esstisch",
@@ -29,8 +79,33 @@
 				"Jalousie bei Esstisch",
 				"Jalousien bei Esstisch"
 			],
-			"up": "esstisch_up",
-			"down": "esstisch_down"
+			"SetMode" : {
+                            "Open": {
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t esstisch_up",
+                                "friendlyNames" : [
+                                    "öffnen",
+                                    "auf",
+                                    "aufmachen",
+                                    "hoch"
+                                ]
+                            },
+                            "Close": {
+                                "command" : "esstisch_down",
+                                "friendlyNames" : [
+                                    "schließen",
+                                    "zu",
+                                    "zumachen",
+                                    "runter"
+                                ]
+                            },
+                            "Stop": {
+                                "command" : "esstisch_down",
+                                "friendlyNames" : [
+                                    "stopp",
+                                    "halt"
+                                ]
+                            }
+                        }
 		},
 		"Balcony": {
 			"friendlyName": "Balkon",
@@ -40,8 +115,33 @@
 				"Jalousie bei Balkon",
 				"Jalousien bei Balkon"
 			],
-			"up": "balkon_up",
-			"down": "balkon_down"
+			"SetMode" : {
+                            "Open": {
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t balkon_up",
+                                "friendlyNames" : [
+                                    "öffnen",
+                                    "auf",
+                                    "aufmachen",
+                                    "hoch"
+                                ]
+                            },
+                            "Close": {
+                                "command" : "balkon_down",
+                                "friendlyNames" : [
+                                    "schließen",
+                                    "zu",
+                                    "zumachen",
+                                    "runter"
+                                ]
+                            },
+                            "Stop": {
+                                "command" : "balkon_down",
+                                "friendlyNames" : [
+                                    "stopp",
+                                    "halt"
+                                ]
+                            }
+                        }
 		},
 		"Sleepingroom": {
 			"friendlyName": "Schlafzimmer",
@@ -51,8 +151,33 @@
 				"Jalousie im Schlafzimmer",
 				"Jalousie im Schlafzimmer"
 			],
-			"up": "schlafzimmer_up",
-			"down": "schlafzimmer_down"
+			"SetMode" : {
+                            "Open": {
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t schlafzimmer_up",
+                                "friendlyNames" : [
+                                    "öffnen",
+                                    "auf",
+                                    "aufmachen",
+                                    "hoch"
+                                ]
+                            },
+                            "Close": {
+                                "command" : "schlafzimmer_down",
+                                "friendlyNames" : [
+                                    "schließen",
+                                    "zu",
+                                    "zumachen",
+                                    "runter"
+                                ]
+                            },
+                            "Stop": {
+                                "command" : "schlafzimmer_down",
+                                "friendlyNames" : [
+                                    "stopp",
+                                    "halt"
+                                ]
+                            }
+                        }
 		},
 		"HomeOffice": {
 			"friendlyName": "Arbeitszimmer",
@@ -62,24 +187,99 @@
 				"Jalousie im Arbeitszimmer",
 				"Jalousien im Arbeitszimmer"
 			],
-			"up": "arbeitszimmer_up",
-			"down": "arbeitszimmer_down"
+			"SetMode" : {
+                            "Open": {
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t arbeitszimmer_up",
+                                "friendlyNames" : [
+                                    "öffnen",
+                                    "auf",
+                                    "aufmachen",
+                                    "hoch"
+                                ]
+                            },
+                            "Close": {
+                                "command" : "arbeitszimmer_down",
+                                "friendlyNames" : [
+                                    "schließen",
+                                    "zu",
+                                    "zumachen",
+                                    "runter"
+                                ]
+                            },
+                            "Stop": {
+                                "command" : "arbeitszimmer_down",
+                                "friendlyNames" : [
+                                    "stopp",
+                                    "halt"
+                                ]
+                            }
+                        }
 		},
 		"Blinds": {
 			"friendlyName": "Jalousien",
 			"friendlyNames": [
 				"Rollos"
 			],
-			"up": "komfort_up",
-			"down": "komfort_down"
+			"SetMode" : {
+                            "Open": {
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t komfort_up",
+                                "friendlyNames" : [
+                                    "öffnen",
+                                    "auf",
+                                    "aufmachen",
+                                    "hoch"
+                                ]
+                            },
+                            "Close": {
+                                "command" : "komfort_down",
+                                "friendlyNames" : [
+                                    "schließen",
+                                    "zu",
+                                    "zumachen",
+                                    "runter"
+                                ]
+                            },
+                            "Stop": {
+                                "command" : "komfort_down",
+                                "friendlyNames" : [
+                                    "stopp",
+                                    "halt"
+                                ]
+                            }
+                        }
 		},
 		"AllBlinds": {
 			"friendlyName": "alle Rollos",
 			"friendlyNames": [
 				"alle Jalousien"
 			],
-			"up": "alle_up",
-			"down": "alle_down"
+			"SetMode" : {
+                            "Open": {
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t alle_up",
+                                "friendlyNames" : [
+                                    "öffnen",
+                                    "auf",
+                                    "aufmachen",
+                                    "hoch"
+                                ]
+                            },
+                            "Close": {
+                                "command" : "alle_down",
+                                "friendlyNames" : [
+                                    "schließen",
+                                    "zu",
+                                    "zumachen",
+                                    "runter"
+                                ]
+                            },
+                            "Stop": {
+                                "command" : "alle_down",
+                                "friendlyNames" : [
+                                    "stopp",
+                                    "halt"
+                                ]
+                            }
+                        }
 		}
 	}
 }
