@@ -10,7 +10,7 @@
 			],
 			"SetMode": {
                             "Open": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t kueche_up > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "öffnen",
@@ -20,7 +20,7 @@
                                 ]
                             },
                             "Close": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t kueche_down > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "schließen",
@@ -30,7 +30,7 @@
                                 ]
                             },
                             "Stop": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t kueche_stop > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "stopp",
@@ -49,7 +49,7 @@
 			],
 			"SetMode": {
                             "Open": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t strasse_up > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "öffnen",
@@ -59,7 +59,7 @@
                                 ]
                             },
                             "Close": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t strasse_down > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "schließen",
@@ -69,7 +69,7 @@
                                 ]
                             },
                             "Stop": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t strasse_stop > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "stopp",
@@ -88,7 +88,7 @@
 			],
 			"SetMode": {
                             "Open": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t esstisch_up > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "öffnen",
@@ -98,7 +98,7 @@
                                 ]
                             },
                             "Close": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t esstisch_down > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "schließen",
@@ -108,7 +108,7 @@
                                 ]
                             },
                             "Stop": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t esstisch_stop > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "stopp",
@@ -127,7 +127,7 @@
 			],
 			"SetMode": {
                             "Open": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t balkon_up > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "öffnen",
@@ -137,7 +137,7 @@
                                 ]
                             },
                             "Close": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t balkon_down > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "schließen",
@@ -147,7 +147,7 @@
                                 ]
                             },
                             "Stop": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t balkon_stop > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "stopp",
@@ -166,7 +166,7 @@
 			],
 			"SetMode": {
                             "Open": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t schlafzimmer_up > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "öffnen",
@@ -176,7 +176,7 @@
                                 ]
                             },
                             "Close": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t schlafzimmer_down > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "schließen",
@@ -186,7 +186,7 @@
                                 ]
                             },
                             "Stop": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t schlafzimmer_stop > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "stopp",
@@ -205,7 +205,7 @@
 			],
 			"SetMode": {
                             "Open": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t arbeitszimmer_up > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "öffnen",
@@ -215,7 +215,7 @@
                                 ]
                             },
                             "Close": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t arbeitszimmer_down > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "schließen",
@@ -225,7 +225,7 @@
                                 ]
                             },
                             "Stop": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t arbeitszimmer_stop > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "stopp",
@@ -241,7 +241,7 @@
 			],
 			"SetMode": {
                             "Open": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t komfort_up > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "öffnen",
@@ -251,7 +251,7 @@
                                 ]
                             },
                             "Close": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t komfort_down > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "schließen",
@@ -261,7 +261,7 @@
                                 ]
                             },
                             "Stop": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t komfort_stop > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "stopp",
@@ -277,7 +277,7 @@
 			],
 			"SetMode": {
                             "Open": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t alle_up > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "öffnen",
@@ -287,7 +287,7 @@
                                 ]
                             },
                             "Close": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t alle_down > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "schließen",
@@ -297,7 +297,7 @@
                                 ]
                             },
                             "Stop": {
-                                "host": "werama.home.vchrist.at"
+                                "host": "werama.home.vchrist.at",
                                 "command": "aircontrol -t alle_stop > /dev/null 2>&1 &",
                                 "friendlyNames": [
                                     "stopp",
