@@ -5,10 +5,13 @@
 
     function discover()
     {
-        $fp = fopen('jalousien.json', 'r');
-        $jalousien = fread($fp, filesize('jalousien.json'));
+    
+    
+        $jalousien = file_get_contents('http://cloud.vchrist.at/remote.php/webdav/SmartHome/Warema/jalousien.json', false, $context);
+        $fp = fopen('jalousien.json', 'w');
+        fwrite($fp, $jalousien);
         fclose($fp);
-        
+    
         $json = json_decode($jalousien);
         
         $devices = new AlexaEndpoints();
