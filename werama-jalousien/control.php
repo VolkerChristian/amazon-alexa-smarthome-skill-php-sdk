@@ -32,6 +32,17 @@ else
 
     $user_check_faild = $oauth_user_data->ocs->meta->message != "OK" || !in_array("Amazon", $oauth_user_data->ocs->data->groups);
 
+    
+    
+    
+    $jalousien = file_get_contents('http://cloud.vchrist.at/remote.php/webdav/SmartHome/Warema/jalousien.json', false, $context);
+    $fp = fopen('jalousien.json', 'w');
+    fwrite($fp, $jalousien);
+    fclose($fp);
+    
+    
+    
+    
     if($user_check_faild)
     {
         $err = new AlexaError(AlexaErrorTypes::INVALID_AUTHORIZATION_CREDENTIAL);
@@ -49,7 +60,7 @@ else
                     $context = new AlexaContext();
                     $context->add_property($contextProperty);
                     $state = new AlexaAsyncResponse($context, $alexa_control->scope()->token, $alexa_control->endpoint->endpointId, $alexa_control->correlationToken());
-                
+
                     if($alexa_control->payload->mode == 'Open')
                     {
                         switch($alexa_control->endpoint->endpointId)
