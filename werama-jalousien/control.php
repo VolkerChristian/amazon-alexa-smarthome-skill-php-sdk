@@ -62,7 +62,7 @@ else
                     {
                     // new
                             $connection = ssh2_connect('werama.home.vchrist.at', 22);
-                            ssh2_auth_pubkey_file($connection, 'pi', '/home/voc/.ssh/id_rsa.pub', '/home/voc/.ssh/id_rsa', '');
+                            ssh2_auth_pubkey_file($connection, 'pi', '/var/www/.ssh/id_rsa.pub', '/var/www/.ssh/id_rsa', '');
                             if ( $connection != FALSE ) {
                                 $contextProperty = new AlexaContextProperty("Alexa.ModeController", "mode", $alexa_control_payload_mode, 500);
                                 $contextProperty->instance = $alexa_control->header->instance;
