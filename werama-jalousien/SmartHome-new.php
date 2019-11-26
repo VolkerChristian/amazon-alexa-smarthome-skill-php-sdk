@@ -3,10 +3,15 @@
     require_once(dirname(dirname(__FILE__)).'/alexa_smarthomeskill_api/alexa_endpoint.php');
     require_once(dirname(dirname(__FILE__)).'/alexa_smarthomeskill_api/alexa_response.php');
 
-    function discover()
+    function discover($token)
     {
-    
-    
+        $opts = [
+            "http" => [
+                "method" => "GET",
+            "header" => "Authorization: Bearer " . $token . "\r\n"
+            ]
+        ];
+        $context = stream_context_create($opts);
         $jalousien = file_get_contents('http://cloud.vchrist.at/remote.php/webdav/SmartHome/Warema/jalousien.json', false, $context);
         $fp = fopen('jalousien.json', 'w');
         fwrite($fp, $jalousien);
