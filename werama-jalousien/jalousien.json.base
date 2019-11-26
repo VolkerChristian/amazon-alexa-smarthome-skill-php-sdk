@@ -8,10 +8,10 @@
 				"Jalousie in Küche",
 				"Jalousien Küche"
 			],
-			"SetMode" : {
+			"SetMode": {
                             "Open": {
                                 "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t kueche_up > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "friendlyNames": [
                                     "öffnen",
                                     "auf",
                                     "aufmachen",
@@ -19,8 +19,8 @@
                                 ]
                             },
                             "Close": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t kueche_down > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t kueche_down > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "schließen",
                                     "zu",
                                     "zumachen",
@@ -28,8 +28,8 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t kueche_stop > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t kueche_stop > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "stopp",
                                     "halt"
                                 ]
@@ -44,10 +44,10 @@
 				"Jalousie auf Straßenseite",
 				"Jalousien auf Straßenseite"
 			],
-			"SetMode" : {
+			"SetMode": {
                             "Open": {
                                 "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t strasse_up > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "friendlyNames": [
                                     "öffnen",
                                     "auf",
                                     "aufmachen",
@@ -55,8 +55,8 @@
                                 ]
                             },
                             "Close": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t strasse_down > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t strasse_down > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "schließen",
                                     "zu",
                                     "zumachen",
@@ -64,8 +64,8 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t strasse_stop > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t strasse_stop > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "stopp",
                                     "halt"
                                 ]
@@ -80,10 +80,10 @@
 				"Jalousie bei Esstisch",
 				"Jalousien bei Esstisch"
 			],
-			"SetMode" : {
+			"SetMode": {
                             "Open": {
                                 "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t esstisch_up > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "friendlyNames": [
                                     "öffnen",
                                     "auf",
                                     "aufmachen",
@@ -91,8 +91,8 @@
                                 ]
                             },
                             "Close": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t esstisch_down > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t esstisch_down > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "schließen",
                                     "zu",
                                     "zumachen",
@@ -100,8 +100,8 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t esstisch_stop > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t esstisch_stop > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "stopp",
                                     "halt"
                                 ]
@@ -116,10 +116,10 @@
 				"Jalousie bei Balkon",
 				"Jalousien bei Balkon"
 			],
-			"SetMode" : {
+			"SetMode": {
                             "Open": {
                                 "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t balkon_up > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "friendlyNames": [
                                     "öffnen",
                                     "auf",
                                     "aufmachen",
@@ -127,8 +127,8 @@
                                 ]
                             },
                             "Close": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t balkon_down > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t balkon_down > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "schließen",
                                     "zu",
                                     "zumachen",
@@ -136,8 +136,8 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t balkon_stop > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t balkon_stop > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "stopp",
                                     "halt"
                                 ]
@@ -152,10 +152,10 @@
 				"Jalousie im Schlafzimmer",
 				"Jalousien im Schlafzimmer"
 			],
-			"SetMode" : {
+			"SetMode": {
                             "Open": {
                                 "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t schlafzimmer_up > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "friendlyNames": [
                                     "öffnen",
                                     "auf",
                                     "aufmachen",
@@ -163,8 +163,8 @@
                                 ]
                             },
                             "Close": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t schlafzimmer_down > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t schlafzimmer_down > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "schließen",
                                     "zu",
                                     "zumachen",
@@ -172,8 +172,8 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t schlafzimmer_stop > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t schlafzimmer_stop > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "stopp",
                                     "halt"
                                 ]
@@ -188,10 +188,10 @@
 				"Jalousie im Arbeitszimmer",
 				"Jalousien im Arbeitszimmer"
 			],
-			"SetMode" : {
+			"SetMode": {
                             "Open": {
                                 "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t arbeitszimmer_up > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "friendlyNames": [
                                     "öffnen",
                                     "auf",
                                     "aufmachen",
@@ -199,8 +199,8 @@
                                 ]
                             },
                             "Close": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t arbeitszimmer_down > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t arbeitszimmer_down > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "schließen",
                                     "zu",
                                     "zumachen",
@@ -208,8 +208,8 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t arbeitszimmer_stop > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t arbeitszimmer_stop > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "stopp",
                                     "halt"
                                 ]
@@ -221,10 +221,10 @@
 			"friendlyNames": [
 				"Rollos"
 			],
-			"SetMode" : {
+			"SetMode": {
                             "Open": {
                                 "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t komfort_up > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "friendlyNames": [
                                     "öffnen",
                                     "auf",
                                     "aufmachen",
@@ -232,8 +232,8 @@
                                 ]
                             },
                             "Close": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t komfort_down > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t komfort_down > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "schließen",
                                     "zu",
                                     "zumachen",
@@ -241,8 +241,8 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t komfort_stop > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t komfort_stop > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "stopp",
                                     "halt"
                                 ]
@@ -254,10 +254,10 @@
 			"friendlyNames": [
 				"alle Jalousien"
 			],
-			"SetMode" : {
+			"SetMode": {
                             "Open": {
                                 "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t alle_up > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "friendlyNames": [
                                     "öffnen",
                                     "auf",
                                     "aufmachen",
@@ -265,8 +265,8 @@
                                 ]
                             },
                             "Close": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t alle_down > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t alle_down > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "schließen",
                                     "zu",
                                     "zumachen",
@@ -274,8 +274,8 @@
                                 ]
                             },
                             "Stop": {
-                                "command" : "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t alle_stop > /dev/null 2>&1 &",
-                                "friendlyNames" : [
+                                "command": "/usr/bin/ssh pi@werama.home.vchrist.at aircontrol -t alle_stop > /dev/null 2>&1 &",
+                                "friendlyNames": [
                                     "stopp",
                                     "halt"
                                 ]
