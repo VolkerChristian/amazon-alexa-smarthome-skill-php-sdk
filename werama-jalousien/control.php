@@ -61,7 +61,7 @@ else
                     if (isset($json->jalousien->$endpoint->$alexa_control_todo->$alexa_control_payload_mode))
                     {
                     // new
-                            $connection = ssh2_connect('werama.home.vchrist.at', 22);
+                            $connection = ssh2_connect('$json->jalousien->$endpoint->$alexa_control_todo->$alexa_control_payload_mode->host', 22);
                             ssh2_auth_pubkey_file($connection, 'pi', '/var/www/.ssh/id_rsa.pub', '/var/www/.ssh/id_rsa', '');
                             if ( $connection != FALSE ) {
                                 $contextProperty = new AlexaContextProperty("Alexa.ModeController", "mode", $alexa_control_payload_mode, 500);
@@ -69,7 +69,7 @@ else
                                 $context = new AlexaContext();
                                 $context->add_property($contextProperty);
                                 $state = new AlexaAsyncResponse($context, $alexa_control->scope()->token, $endpoint, $alexa_control->correlationToken());
-                                ssh2_exec($connection, 'aircontrol -t strasse_up > /dev/null 2>&1 &');
+                                ssh2_exec($connection, $json->jalousien->$endpoint->$alexa_control_todo->$alexa_control_payload_mode->command);
                             } else {
                                 $err = new AlexaError(AlexaErrorTypes::NO_SUCH_ENDPOINT);
                                 $state = new AlexaErrorResponse($alexa_control->endpoint->endpointId, $err->type, $err->msg);
