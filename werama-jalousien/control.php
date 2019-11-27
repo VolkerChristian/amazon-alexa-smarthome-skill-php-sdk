@@ -73,6 +73,7 @@ else
                             $err = new AlexaError(AlexaErrorTypes::ENDPOINT_UNREACHABLE);
                             $state = new AlexaErrorResponse($alexa_control->endpoint->endpointId, $err->type, $err->msg);
                         }
+                        ssh2_disconnect ($connection);
                         unset($connection);
                     }
                     else
