@@ -68,8 +68,6 @@
         
         echo json_encode($devices_response);
         echo "\n";
-
-
     }
 
     if (!isset ($called))
