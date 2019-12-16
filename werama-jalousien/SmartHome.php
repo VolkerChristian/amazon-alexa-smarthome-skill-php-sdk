@@ -14,7 +14,7 @@
                 ]
             ];
             $context = stream_context_create($opts);
-            $jalousien = file_get_contents('http://cloud.vchrist.at/remote.php/webdav/SmartHome/Warema/jalousien.json', false, $context);
+            $jalousien = file_get_contents('https://cloud.vchrist.at/remote.php/webdav/SmartHome/Warema/jalousien.json', false, $context);
             $fp = fopen('jalousien.json', 'w');
             fwrite($fp, $jalousien);
             fclose($fp);
