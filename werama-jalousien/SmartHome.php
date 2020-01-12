@@ -10,7 +10,7 @@
             $opts = [
                 "http" => [
                     "method" => "GET",
-                "header" => "Authorization: Bearer " . $token . "\r\n"
+	                "header" => "Authorization: Bearer " . $token . "\r\n"
                 ]
             ];
             $context = stream_context_create($opts);
