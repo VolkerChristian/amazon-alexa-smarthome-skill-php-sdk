@@ -77,7 +77,7 @@ else
                         ssh2_disconnect ($connection);
                         unset($connection);
                         */
-                        $result = http_get($json->jalousien->$endpoint->$alexa_control_todo->$alexa_control_payload_mode->url);
+                        $result = file_get_contents($json->jalousien->$endpoint->$alexa_control_todo->$alexa_control_payload_mode->url);
                         if (strpos($result, "OK:") !== false) {
 						    $contextProperty = new AlexaContextProperty("Alexa.ModeController", "mode", $alexa_control_payload_mode, 500);
 						    $contextProperty->instance = $alexa_control->header->instance;
