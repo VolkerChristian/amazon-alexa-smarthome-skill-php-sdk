@@ -1,0 +1,334 @@
+{
+    "jalousien": {
+        "Kitchen": {
+            "friendlyName": "Küche",
+            "friendlyNames": [
+                "Küchen Jalousie",
+                "Küchen Jalousien",
+                "Jalousie in Küche",
+                "Jalousien Küche"
+            ],
+            "SetMode": {
+                "Open": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/kueche?action=open",
+                    "command": "aircontrol -t kueche_up > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "öffnen",
+                        "auf",
+                        "aufmachen",
+                        "hoch"
+                    ]
+                },
+                "Close": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/kueche?action=close",
+                    "command": "aircontrol -t kueche_down > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "schließen",
+                        "zu",
+                        "zumachen",
+                        "runter"
+                    ]
+                },
+                "Stop": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/kueche?action=stop",
+                    "command": "aircontrol -t kueche_stop > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "stopp",
+                        "halt"
+                    ]
+                }
+            }
+        },
+        "Street": {
+            "friendlyName": "Straßenseite",
+            "friendlyNames": [
+                "Straßenseitige Jalousien",
+                "Straßenseite Jalousien",
+                "Jalousie auf Straßenseite",
+                "Jalousien auf Straßenseite"
+            ],
+            "SetMode": {
+                "Open": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/strasse?action=open",
+                    "command": "aircontrol -t strasse_up > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "öffnen",
+                        "auf",
+                        "aufmachen",
+                        "hoch"
+                    ]
+                },
+                "Close": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/strasse?action=close",
+                    "command": "aircontrol -t strasse_down > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "schließen",
+                        "zu",
+                        "zumachen",
+                        "runter"
+                    ]
+                },
+                "Stop": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/strasse?action=stop",
+                    "command": "aircontrol -t strasse_stop > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "stopp",
+                        "halt"
+                    ]
+                }
+            }
+        },
+        "Diningtable": {
+            "friendlyName": "Esstisch",
+            "friendlyNames": [
+                "Esstisch Jalousie",
+                "Esstisch Jalousien",
+                "Jalousie bei Esstisch",
+                "Jalousien bei Esstisch"
+            ],
+            "SetMode": {
+                "Open": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/esstisch?action=open",
+                    "command": "aircontrol -t esstisch_up > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "öffnen",
+                        "auf",
+                        "aufmachen",
+                        "hoch"
+                    ]
+                },
+                "Close": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/esstisch?action=close",
+                    "command": "aircontrol -t esstisch_down > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "schließen",
+                        "zu",
+                        "zumachen",
+                        "runter"
+                    ]
+                },
+                "Stop": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/esstisch?action=stop",
+                    "command": "aircontrol -t esstisch_stop > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "stopp",
+                        "halt"
+                    ]
+                }
+            }
+        },
+        "Balcony": {
+            "friendlyName": "Balkon",
+            "friendlyNames": [
+                "Balkon Jalousie",
+                "Balkon Jalousien",
+                "Jalousie bei Balkon",
+                "Jalousien bei Balkon"
+            ],
+            "SetMode": {
+                "Open": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/balkon?action=open",
+                    "command": "aircontrol -t balkon_up > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "öffnen",
+                        "auf",
+                        "aufmachen",
+                        "hoch"
+                    ]
+                },
+                "Close": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/balkon?action=close",
+                    "command": "aircontrol -t balkon_down > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "schließen",
+                        "zu",
+                        "zumachen",
+                        "runter"
+                    ]
+                },
+                "Stop": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/balkon?action=stop",
+                    "command": "aircontrol -t balkon_stop > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "stopp",
+                        "halt"
+                    ]
+                }
+            }
+        },
+        "Sleepingroom": {
+            "friendlyName": "Schlafzimmer",
+            "friendlyNames": [
+                "Schlafzimmer Jalousie",
+                "Schlafzimmer Jalousien",
+                "Jalousie im Schlafzimmer",
+                "Jalousien im Schlafzimmer"
+            ],
+            "SetMode": {
+                "Open": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/schlafzimmer?action=open",
+                    "command": "aircontrol -t schlafzimmer_up > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "öffnen",
+                        "auf",
+                        "aufmachen",
+                        "hoch"
+                    ]
+                },
+                "Close": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/schlafzimmer?action=close",
+                    "command": "aircontrol -t schlafzimmer_down > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "schließen",
+                        "zu",
+                        "zumachen",
+                        "runter"
+                    ]
+                },
+                "Stop": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/schlafzimmer?action=stop",
+                    "command": "aircontrol -t schlafzimmer_stop > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "stopp",
+                        "halt"
+                    ]
+                }
+            }
+        },
+        "HomeOffice": {
+            "friendlyName": "Arbeitszimmer",
+            "friendlyNames": [
+                "Arbeitszimmer Jalousie",
+                "Arbeitszimmer Jalousien",
+                "Jalousie im Arbeitszimmer",
+                "Jalousien im Arbeitszimmer"
+            ],
+            "SetMode": {
+                "Open": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/arbeitszimmer?action=open",
+                    "command": "aircontrol -t arbeitszimmer_up > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "öffnen",
+                        "auf",
+                        "aufmachen",
+                        "hoch"
+                    ]
+                },
+                "Close": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/arbeitszimmer?action=close",
+                    "command": "aircontrol -t arbeitszimmer_down > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "schließen",
+                        "zu",
+                        "zumachen",
+                        "runter"
+                    ]
+                },
+                "Stop": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/arbeitszimmer?action=stop",
+                    "command": "aircontrol -t arbeitszimmer_stop > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "stopp",
+                        "halt"
+                    ]
+                }
+            }
+        },
+        "Blinds": {
+            "friendlyName": "Jalousien",
+            "friendlyNames": [
+                "Rollos"
+            ],
+            "SetMode": {
+                "Open": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/comfort?action=open",
+                    "command": "aircontrol -t komfort_up > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "öffnen",
+                        "auf",
+                        "aufmachen",
+                        "hoch"
+                    ]
+                },
+                "Close": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/comfort?action=close",
+                    "command": "aircontrol -t komfort_down > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "schließen",
+                        "zu",
+                        "zumachen",
+                        "runter"
+                    ]
+                },
+                "Stop": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/comfort?action=stop",
+                    "command": "aircontrol -t komfort_stop > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "stopp",
+                        "halt"
+                    ]
+                }
+            }
+        },
+        "AllBlinds": {
+            "friendlyName": "alle Rollos",
+            "friendlyNames": [
+                "alle Jalousien"
+            ],
+            "SetMode": {
+                "Open": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/all?action=open",
+                    "command": "aircontrol -t alle_up > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "öffnen",
+                        "auf",
+                        "aufmachen",
+                        "hoch"
+                    ]
+                },
+                "Close": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/all?action=close",
+                    "command": "aircontrol -t alle_down > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "schließen",
+                        "zu",
+                        "zumachen",
+                        "runter"
+                    ]
+                },
+                "Stop": {
+                    "host": "werama.home.vchrist.at",
+                    "url": "http://werama.home.vchrist.at:8888/jalousien/all?action=stop",
+                    "command": "aircontrol -t alle_stop > /dev/null 2>&1 &",
+                    "friendlyNames": [
+                        "stopp",
+                        "halt"
+                    ]
+                }
+            }
+        }
+    }
+}
